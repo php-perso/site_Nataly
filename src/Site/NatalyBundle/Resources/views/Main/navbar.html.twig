@@ -11,7 +11,8 @@
             </button>
 
             <a href="{{ path('site_nataly_homepage') }}">
-                Ici
+                {% set logo = [path_images, "test.jpg"] | join('') %}
+                <img src="{{ logo }}" />
             </a>
 
         </div>
