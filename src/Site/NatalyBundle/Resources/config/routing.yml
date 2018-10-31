@@ -1,0 +1,3 @@
+site_nataly_homepage:
+    path:     /
+    defaults: { _controller: SiteNatalyBundle:Default:index }
