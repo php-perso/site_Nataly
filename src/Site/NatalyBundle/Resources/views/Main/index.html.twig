@@ -4,7 +4,15 @@
     {{ parent() }} - {% trans %}Accueil{% endtrans %}
 {% endblock %}
 
+{% block css %}
+    {{ parent() }}
+{% endblock %}
+
 {% block body %}
     {{ parent() }}
     salut
+{% endblock %}
+
+{% block js %}
+
 {% endblock %}
