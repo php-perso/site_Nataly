@@ -4,10 +4,13 @@ namespace Site\NatalyBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class MainController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@SiteNataly/Default/index.html.twig');
+        return $this->render('@SiteNataly/Main/index.html.twig');
     }
 }
+
+
+?>
