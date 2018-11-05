@@ -1,13 +1,21 @@
 /* Feuille Style du navbar */
 
 /* Police utilisée dans le navbar */
-/*@font-face
+@font-face
 {
 	font-family: 'BERNIERRegular-Regular';
-	src: url('{{ asset('police/BERNIERRegular-Regular.otf')}} format('truetype');
+	src: url('../font/BERNIERRegular-Regular.otf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-}*/
+}
+
+/* Permet de changer le style de la police du titre du block-contact */
+nav
+{
+    font-family: 'BERNIERRegular-Regular', sans-serif;
+    color : white;
+    position : relative;
+}
 
 /* Le background du navbar */
 .background_navbar

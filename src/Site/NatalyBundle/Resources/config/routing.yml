@@ -1,3 +1,27 @@
 site_nataly_homepage:
     path:     /
     defaults: { _controller: SiteNatalyBundle:Main:index }
+
+site_nataly_about_me:
+    path:     /about-me
+    defaults: { _controller: SiteNatalyBundle:Main:aboutme }
+
+site_nataly_portfolio:
+    path:     /portfolio
+    defaults: { _controller: SiteNatalyBundle:Main:portfolio }
+    
+site_nataly_shop:
+    path:     /shop
+    defaults: { _controller: SiteNatalyBundle:Main:shop }
+    
+site_nataly_blog:
+    path:     /blog
+    defaults: { _controller: SiteNatalyBundle:Main:blog }
+    
+site_nataly_movie:
+    path:     /movie
+    defaults: { _controller: SiteNatalyBundle:Main:movie }
+
+site_nataly_contact:
+    path:     /contact
+    defaults: { _controller: SiteNatalyBundle:Main:contact }
