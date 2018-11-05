@@ -1,0 +1,48 @@
+/* Feuille Style du navbar */
+
+/* Police utilisée dans le navbar */
+/*@font-face
+{
+	font-family: 'BERNIERRegular-Regular';
+	src: url('{{ asset('police/BERNIERRegular-Regular.otf')}} format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}*/
+
+/* Le background du navbar */
+.background_navbar
+{
+	background-color : #48C9FF;
+	border : none;
+	padding : 0px 0px 10px 0px;
+}
+
+@media (max-width: 1199px)
+{
+	/* Gère l'affichage du bouton Déconnection en petit écran */
+	.design_bouton_header
+	{
+		margin : 7px 0px 0px 45px;
+	}
+	
+	/* Gère la taille du logo du site dans le Header sur petit écran */
+	.logo_nataly_navbar
+	{
+        position : relative;
+        left : 10%;
+	}
+}
+
+.navbar-toggler
+{
+    border : 1px solid black;
+}
+
+/* Gère la taille du logo du site dans le Header sur grand écran */
+.logo_nataly_navbar
+{
+	width : 100px;
+    height : 50px;
+    margin-top : 5px;
+}
+
