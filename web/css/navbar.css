@@ -34,31 +34,35 @@ nav
 	display : none;
 }
 
+/* Sur petit écran */
 @media (max-width: 1199px)
 {
-	/* Gère l'affichage du bouton Déconnection en petit écran */
+	/* Gère l'affichage du bouton Déconnection */
 	.design_bouton_header
 	{
 		margin : 7px 0px 0px 45px;
 	}
 	
-	/* Gère la taille du logo du site dans le Header sur petit écran */
+	/* Gère la taille du logo du site dans le Header */
 	.logo_nataly_navbar
 	{
         position : relative;
         left : 10%;
 	}
 
+	/* Affichage du logo */
 	#logoPetitEcran
 	{
 		display : block !important;
 	}
 
+	/* Cache le logo pour grand écran */
 	#logoGrandEcran
 	{
 		display : none !important;
 	}
 
+	/* Ajuste la marge des liens */
 	.police_nataly_navbar
 	{
 		margin-left : 10px !important;
@@ -81,18 +85,28 @@ nav
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.police_nataly_navbar
+/* Taille et marge de la police */
+.police_nataly_navbar, .police_nataly_navbar_select
 {
 	font-size : 28px;
 	margin-left : 45px;
 }
 
+/* couleur des liens */
 .police_nataly_navbar a
 {
 	color : black;
 	text-decoration : none;
 }
 
+/* couleur du lien actif */
+.police_nataly_navbar_select a
+{
+	color : white;
+	text-decoration : none;
+}
+
+/* couleur des liens au survole */
 .police_nataly_navbar a:hover
 {
 	color : white;

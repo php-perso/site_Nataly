@@ -35,8 +35,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-    globals:
-        path_images: '%path_images%'
+    # globals:
+        # path_images: '%path_images%'
 
 # Doctrine Configuration
 doctrine:

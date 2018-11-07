@@ -44,6 +44,9 @@
 
         </div>
       </nav>#}
+        {# {% set logo = [path_images, "logo/na.png"] | join('') %}
+         {% set logo = [path_images, "logo/na.png"] | join('') %}
+         #}
 
 
 
@@ -51,8 +54,7 @@
 
     {# Logo petit écran #}
     <a href="{{ path('site_nataly_homepage') }}" id="logoPetitEcran">
-        {% set logo = [path_images, "logo/na.png"] | join('') %}
-        <img src="{{ logo }}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
+        <img src="{{ asset('../../images/logo/na.png')}}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
     </a>
 
     {# Bouton Buger #}
@@ -65,20 +67,56 @@
 
         {# Logo grand écran #}
         <a href="{{ path('site_nataly_homepage') }}" id="logoGrandEcran">
-            {% set logo = [path_images, "logo/na.png"] | join('') %}
-            <img src="{{ logo }}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
+            <img src="{{ asset('../../images/logo/na.png')}}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
         </a>
 
         {# Liste de navigation #}
         <ul class="navbar-nav">
-            <li class="police_nataly_navbar">
+            
+            {# Vers About me #}
+            {% if menu == "about_me" %}
+                <li class="police_nataly_navbar_select">
+            {% else %}
+                <li class="police_nataly_navbar">
+            {% endif %}
                 <a href="{{ path('site_nataly_about_me') }}">
                     About me
                 </a>
             </li>
-            <li class="police_nataly_navbar">Portfolio</li>
-            <li class="police_nataly_navbar">Shop</li>
-            <li class="police_nataly_navbar">Blog</li>			
+
+            {# Vers Portfolio #}
+            {% if menu == "portfolio" %}
+                <li class="police_nataly_navbar_select">
+            {% else %}
+                <li class="police_nataly_navbar">
+            {% endif %}
+                <a href="{{ path('site_nataly_portfolio') }}">
+                    Portfolio
+                </a>
+            </li>
+
+            {# Vers Shop #}
+            {% if menu == "shop" %}
+                <li class="police_nataly_navbar_select">
+            {% else %}
+                <li class="police_nataly_navbar">
+            {% endif %}
+                <a href="{{ path('site_nataly_shop') }}">
+                    Shop
+                </a>
+            </li>
+
+            {# Vers Blog #}
+            {% if menu == "blog" %}
+                <li class="police_nataly_navbar_select">
+            {% else %}
+                <li class="police_nataly_navbar">
+            {% endif %}
+                <a href="{{ path('site_nataly_blog') }}">
+                    Blog
+                </a>
+            </li>
+
             <li class="police_nataly_navbar">Movie</li>
             <li class="police_nataly_navbar">Contact</li> 
         </ul>
