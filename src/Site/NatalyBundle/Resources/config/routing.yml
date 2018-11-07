@@ -4,7 +4,7 @@ site_nataly_homepage:
 
 site_nataly_about_me:
     path:     /about-me
-    defaults: { _controller: SiteNatalyBundle:Main:aboutme }
+    defaults: { _controller: SiteNatalyBundle:Main:about_me }
 
 site_nataly_portfolio:
     path:     /portfolio

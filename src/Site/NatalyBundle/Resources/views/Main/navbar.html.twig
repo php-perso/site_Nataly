@@ -49,9 +49,9 @@
 
 <nav class="navbar navbar-expand-xl navbar-dark background_navbar">
 
-    {# Logo #}
-    <a href="{{ path('site_nataly_homepage') }}">
-        {% set logo = [path_images, "/logo/na.png"] | join('') %}
+    {# Logo petit écran #}
+    <a href="{{ path('site_nataly_homepage') }}" id="logoPetitEcran">
+        {% set logo = [path_images, "logo/na.png"] | join('') %}
         <img src="{{ logo }}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
     </a>
 
@@ -62,8 +62,20 @@
 
     {# Les Menus #}
     <div class="collapse navbar-collapse justify-content-md-center" id="navbar">
+
+        {# Logo grand écran #}
+        <a href="{{ path('site_nataly_homepage') }}" id="logoGrandEcran">
+            {% set logo = [path_images, "logo/na.png"] | join('') %}
+            <img src="{{ logo }}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
+        </a>
+
+        {# Liste de navigation #}
         <ul class="navbar-nav">
-            <li class="police_nataly_navbar first_onglet">About me</li>
+            <li class="police_nataly_navbar">
+                <a href="{{ path('site_nataly_about_me') }}">
+                    About me
+                </a>
+            </li>
             <li class="police_nataly_navbar">Portfolio</li>
             <li class="police_nataly_navbar">Shop</li>
             <li class="police_nataly_navbar">Blog</li>			
