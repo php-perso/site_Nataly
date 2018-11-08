@@ -37,15 +37,17 @@ class MainController extends Controller
         return $this->render('@SiteNataly/Main/blog.html.twig', array('menu' => $menu ));
     }
 
-    /*public function indexAction()
+    public function movieAction()
     {
-        return $this->render('@SiteNataly/Main/index.html.twig', array('menu' => $menu ));
+        $menu = "movie";
+        return $this->render('@SiteNataly/Main/movie.html.twig', array('menu' => $menu ));
     }
 
-    public function indexAction()
+    public function contactAction()
     {
-        return $this->render('@SiteNataly/Main/index.html.twig', array('menu' => $menu ));
-    }*/
+        $menu = "contact";
+        return $this->render('@SiteNataly/Main/contact.html.twig', array('menu' => $menu ));
+    }
 }
 
 

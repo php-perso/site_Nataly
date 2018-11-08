@@ -117,8 +117,27 @@
                 </a>
             </li>
 
-            <li class="police_nataly_navbar">Movie</li>
-            <li class="police_nataly_navbar">Contact</li> 
+            {# Vers Movie #}
+            {% if menu == "movie" %}
+                <li class="police_nataly_navbar_select">
+            {% else %}
+                <li class="police_nataly_navbar">
+            {% endif %}
+                <a href="{{ path('site_nataly_movie') }}">
+                    Movie
+                </a>
+            </li>
+
+            {# Vers Contact #}
+            {% if menu == "contact" %}
+                <li class="police_nataly_navbar_select">
+            {% else %}
+                <li class="police_nataly_navbar">
+            {% endif %}
+                <a href="{{ path('site_nataly_contact') }}">
+                    Contact
+                </a>
+            </li> 
         </ul>
     </div>
 </nav>

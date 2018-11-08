@@ -63,7 +63,7 @@ nav
 	}
 
 	/* Ajuste la marge des liens */
-	.police_nataly_navbar
+	.police_nataly_navbar, .police_nataly_navbar_select
 	{
 		margin-left : 10px !important;
 	}
