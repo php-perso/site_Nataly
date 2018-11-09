@@ -9,8 +9,9 @@ class MainController extends Controller
     public function indexAction()
     { 
         $menu = "accueil";
-        //$rootTest = $this->get('kernel')->getRootDir();
-        return $this->render('@SiteNataly/Main/index.html.twig', array('menu' => $menu ));
+        $rootImage = $this->get('kernel')->getRootImages();
+        $rootImage = str_replace ("\\", "/", $rootImage);
+        return $this->render('@SiteNataly/Main/index.html.twig', array('menu' => $menu, 'rootImage' => $rootImage ));
     }
 
     public function about_meAction()

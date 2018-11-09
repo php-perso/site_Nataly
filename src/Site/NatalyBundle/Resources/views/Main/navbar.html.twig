@@ -48,13 +48,16 @@
          {% set logo = [path_images, "logo/na.png"] | join('') %}
          #}
 
+{# Variables à utiliser #}
 
+{# Chemin logo #}
+{% set logo = [rootImage, "logo/na.png"] | join('') %}
 
 <nav class="navbar navbar-expand-xl navbar-dark background_navbar">
 
     {# Logo petit écran #}
     <a href="{{ path('site_nataly_homepage') }}" id="logoPetitEcran">
-        <img src="{{ asset('../../images/logo/na.png')}}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
+        <img src="{{ asset('../../images/logo/na.png') }}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
     </a>
 
     {# Bouton Buger #}
@@ -67,7 +70,7 @@
 
         {# Logo grand écran #}
         <a href="{{ path('site_nataly_homepage') }}" id="logoGrandEcran">
-            <img src="{{ asset('../../images/logo/na.png')}}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
+            <img src="{{ asset('../../images/logo/na.png') }}" class="logo_nataly_navbar" alt="{% trans %}logo principal{% endtrans %}" />
         </a>
 
         {# Liste de navigation #}

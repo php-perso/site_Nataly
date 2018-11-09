@@ -6,13 +6,80 @@
 
 {% block css %}
     {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+
 {% endblock %}
 
 {% block body %}
+    {# layout.html.twig #}
     {{ parent() }}
-    salut
+
+    <div id="myContainer" class="margin_top_index">
+		
+			<div class="section">
+				<div class="slide accueil1">
+					<img src="images/fleche_accueil.gif" alt="Slide bottom" title="Scrolling Down" class="image_accueil" onclick="slide_page2()"/>
+				</div>
+			</div>
+			
+			<div class="section">
+				<div class="slide accueil2">
+					<div class="container margin_responsive">
+						<div class="row">
+							<div class="col-xs-5 text_gauche_accueil">
+								<div class="margin_top_text_gauche_accueil"><span class="police_numero_gauche_accueil">5</span> Facts</div><div class="margin_top_text_gauche_aboutme"></br>about me</div>
+							</div>
+							<div class="col-xs-offset-2 col-xs-5 text_droite_accueil">
+								<p class="responsive_police_accueil_page2 margin_texte_droite_accueil_top">I'm Graphic Designer</p>
+								<p class="responsive_police_accueil_page2 margin_texte_droite_accueil">I'm from Russia from South Ural</p>
+								<p class="margin_texte_droite_accueil"><div class="responsive_police_accueil_page2">I like Coffee and Cats</br></div><div class="police_who">(Who doesn't like it)</div></p>
+								<p class="responsive_police_accueil_page2 margin_texte_droite_accueil">I'm Sagitaire</p>
+								<p class="responsive_police_accueil_page2 margin_texte_droite_accueil margin_less_lastrow">My favorit color is Turquoise</p>
+							</div>
+						</div>
+					</div>
+					<img src="images/fleche_accueil.gif" alt="Slide bottom" title="Scrolling Down" class="image_accueil" onclick="slide_page3()"/>
+				</div>
+			</div>
+			
+			<div class="section">
+				<div class="slide accueil3">
+					<div class="container margin_responsive margin_troisieme_slide">
+						<!-- Three columns of text below the carousel -->
+						<div class="row">
+							<div class="col-xs-4">
+								<img class="img-circle image_responsive_accueil_page3" onmouseover="this.src='assets/css/accueil/books_image.png'" onmouseout="this.src='assets/css/accueil/read.png'" src="assets/css/accueil/read.png" alt="Image Books">
+							</div><!-- /.col-lg-3 -->
+							<div class="col-xs-4">
+								<img class="img-circle image_responsive_accueil_page3" onmouseover="this.src='assets/css/accueil/cook_image.png'" onmouseout="this.src='assets/css/accueil/cook.png'" src="assets/css/accueil/cook.png" alt="Image Cook">
+							</div><!-- /.col-lg-3 -->
+							<div class="col-xs-4">
+								<img class="img-circle image_responsive_accueil_page3" onmouseover="this.src='assets/css/accueil/languages_image.png'" onmouseout="this.src='assets/css/accueil/languages.png'" src="assets/css/accueil/languages.png" alt="Image Languages">
+							</div><!-- /.col-lg-4 -->
+						
+							<div class="col-xs-4 margin_top_photo_slide3">
+								<img class="img-circle image_responsive_accueil_page3" onmouseover="this.src='assets/css/accueil/snowboard_image.png'" onmouseout="this.src='assets/css/accueil/snowboard.png'" src="assets/css/accueil/snowboard.png" alt="Image SnowBoard">
+							</div><!-- /.col-lg-3 -->
+							<div class="col-xs-4 margin_top_photo_slide3">
+								<img class="img-circle image_responsive_accueil_page3" onmouseover="this.src='assets/css/accueil/swimming_image.png'" onmouseout="this.src='assets/css/accueil/swim.png'" src="assets/css/accueil/swim.png" alt="Image Swimming Pool">
+							</div><!-- /.col-lg-3 -->
+							<div class="col-xs-4 margin_top_photo_slide3">
+								<img class="img-circle image_responsive_accueil_page3" onmouseover="this.src='assets/css/accueil/travel_image.png'" onmouseout="this.src='assets/css/accueil/travel.png'" src="assets/css/accueil/travel.png" alt="Image Travel">
+							</div><!-- /.col-lg-4 -->
+						</div><!-- /.row -->
+					</div>
+					<img src="images/fleche_accueil.gif" alt="Back to the 1st page" title="Back to 1st page" class="image_retour_1st" onclick="retour_1st()"/>
+				</div>
+			</div>
+			
+		</div>
+
 {% endblock %}
 
 {% block js %}
-
+    <!-- <script type="text/javascript" src="../fullPage/fullpage.offsetSections.limited.min.js"></script> -->
+    <script type="text/javascript" src="../fullPage/dist/jquery.fullpage.extensions.min.js"></script>
+    <!-- Doit être le dernier script à appeler car sinon les fonctions que contient le fichier ne les comprend pas (les scripts précédents permettent de comprendre ce script -->
+    <!-- JavaScript de l'index en relation avec FullPage.js -->
+    <script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
 {% endblock %}

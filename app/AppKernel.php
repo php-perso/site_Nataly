@@ -39,6 +39,11 @@ class AppKernel extends Kernel
         return __DIR__;
     }
 
+    public function getRootImages()
+    {
+        return __DIR__.'/../../images/';
+    }
+
     public function getCacheDir()
     {
         return dirname(__DIR__).'/var/cache/'.$this->getEnvironment();
